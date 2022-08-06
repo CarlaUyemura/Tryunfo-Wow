@@ -5,7 +5,7 @@ class Filter extends React.Component {
   render() {
     const { onInputChange, searchName, type, trunfoFilter } = this.props;
     return (
-      <div>
+      <div className="container-filter">
         <label htmlFor="search">
           Filtro de Busca
           <input
@@ -18,7 +18,7 @@ class Filter extends React.Component {
           />
         </label>
         <label htmlFor="rare">
-          Filtrar por Raridade:
+          Filtrar por Raridade
           <select
             data-testid="rare-filter"
             id="type"
@@ -34,8 +34,9 @@ class Filter extends React.Component {
           </select>
         </label>
         <label htmlFor="trunfoFilter">
-          Super Trunfo:
+          Super Trunfo
           <input
+            className="trunfo"
             data-testid="trunfo-filter"
             type="checkbox"
             id="trunfoFilter"

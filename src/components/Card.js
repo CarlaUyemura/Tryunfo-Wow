@@ -2,6 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class Card extends React.Component {
+  verificaColorRaridade = () => {
+    const { cardRare } = this.props;
+    if (cardRare === 'normal') {
+      return <h2 data-testid="rare-card" className="raridade-card normal">{cardRare}</h2>;
+    }
+    if (cardRare === 'raro') {
+      return <h2 data-testid="rare-card" className="raridade-card raro">{cardRare}</h2>;
+    }
+    return (
+      <h2
+        data-testid="rare-card"
+        className="raridade-card muito-raro"
+      >
+        {cardRare}
+      </h2>);
+  }
+
   render() {
     const {
       cardName,
@@ -10,19 +27,44 @@ class Card extends React.Component {
       cardAttr2,
       cardAttr3,
       cardImage,
-      cardRare,
       cardTrunfo,
     } = this.props;
     return (
-      <section id="card">
-        <h2 data-testid="name-card">{cardName}</h2>
-        <img data-testid="image-card" src={ cardImage } alt={ cardName } />
-        <p data-testid="description-card">{cardDescription}</p>
-        <p data-testid="attr1-card">{cardAttr1}</p>
-        <p data-testid="attr2-card">{cardAttr2}</p>
-        <p data-testid="attr3-card">{cardAttr3}</p>
-        <h2 data-testid="rare-card">{cardRare}</h2>
-        {cardTrunfo === true ? <h2 data-testid="trunfo-card">Super Trunfo</h2> : ''}
+      <section className="card">
+        <div className="container-name">
+          <h2 data-testid="name-card" className="name-card">{cardName}</h2>
+        </div>
+        <div className="img-card">
+          {cardImage
+            ? <img data-testid="image-card" src={ cardImage } alt="Personagem" /> : ''}
+        </div>
+        <div className="container-rare-trunfo">
+          {this.verificaColorRaridade()}
+          {cardTrunfo === true
+            ? (
+              <h2
+                data-testid="trunfo-card"
+                className="super-trunfo"
+              >
+                Super Trunfo
+
+              </h2>
+            ) : ''}
+        </div>
+        <div className="container-descricao">
+          <p
+            data-testid="description-card"
+            className="descricao-card"
+          >
+            {cardDescription}
+
+          </p>
+        </div>
+        <div className="container-atributos">
+          <p data-testid="attr1-card" className="forca">{cardAttr1}</p>
+          <p data-testid="attr2-card" className="velocidade">{cardAttr2}</p>
+          <p data-testid="attr3-card" className="magia">{cardAttr3}</p>
+        </div>
       </section>
     );
   }

@@ -19,8 +19,8 @@ class Form extends React.Component {
     } = this.props;
     return (
       <form>
+        Nome da carta
         <label htmlFor="name-card">
-          Nome da carta
           <input
             data-testid="name-input"
             type="text"
@@ -41,41 +41,46 @@ class Form extends React.Component {
             onChange={ onInputChange }
           />
         </label>
-        <label htmlFor="attr1">
-          Vida
-          <input
-            data-testid="attr1-input"
-            type="number"
-            id="attr1"
-            name="cardAttr1"
-            value={ cardAttr1 }
-            onChange={ onInputChange }
-          />
-        </label>
-        <label htmlFor="attr2">
-          Velocidade
-          <input
-            data-testid="attr2-input"
-            type="number"
-            id="attr2"
-            name="cardAttr2"
-            value={ cardAttr2 }
-            onChange={ onInputChange }
-          />
-        </label>
-        <label htmlFor="attr3">
+        <div className="container-numbers">
           Força
-          <input
-            data-testid="attr3-input"
-            type="number"
-            id="attr3"
-            name="cardAttr3"
-            value={ cardAttr3 }
-            onChange={ onInputChange }
-          />
-        </label>
+          <label htmlFor="attr1">
+            <input
+              className="numbers"
+              data-testid="attr1-input"
+              type="number"
+              id="attr1"
+              name="cardAttr1"
+              value={ cardAttr1 }
+              onChange={ onInputChange }
+            />
+          </label>
+          Velocidade
+          <label htmlFor="attr2">
+            <input
+              className="numbers"
+              data-testid="attr2-input"
+              type="number"
+              id="attr2"
+              name="cardAttr2"
+              value={ cardAttr2 }
+              onChange={ onInputChange }
+            />
+          </label>
+          Magia
+          <label htmlFor="attr3">
+            <input
+              className="numbers"
+              data-testid="attr3-input"
+              type="number"
+              id="attr3"
+              name="cardAttr3"
+              value={ cardAttr3 }
+              onChange={ onInputChange }
+            />
+          </label>
+        </div>
+        Imagem
         <label htmlFor="image">
-          Image:
           <input
             data-testid="image-input"
             type="text"
@@ -85,38 +90,45 @@ class Form extends React.Component {
             onChange={ onInputChange }
           />
         </label>
-        <label htmlFor="rare">
-          Raridade:
-          <select
-            data-testid="rare-input"
-            id="rare"
-            name="cardRare"
-            value={ cardRare }
-            onChange={ onInputChange }
-          >
-            <option value="normal">Normal</option>
-            <option value="raro">Raro</option>
-            <option value="muito raro">Muito raro</option>
-          </select>
-        </label>
-        {
-          !hasTrunfo
-            ? (
-              <label htmlFor="trunfo">
-                Carta Super Trunfo:
-                <input
-                  data-testid="trunfo-input"
-                  type="checkbox"
-                  id="trunfo"
-                  name="cardTrunfo"
-                  checked={ cardTrunfo }
-                  onChange={ onInputChange }
-                />
-              </label>
-            )
-            : <h3>Você já tem um Super Trunfo em seu baralho</h3>
-        }
+        <div className="container-rare">
+          <div className="container-select">
+            Raridade
+            <label htmlFor="rare">
+              <select
+                className="raridade"
+                data-testid="rare-input"
+                id="rare"
+                name="cardRare"
+                value={ cardRare }
+                onChange={ onInputChange }
+              >
+                <option value="normal">Normal</option>
+                <option value="raro">Raro</option>
+                <option value="muito raro">Muito raro</option>
+              </select>
+            </label>
+          </div>
+          {
+            !hasTrunfo
+              ? (
+                <label htmlFor="trunfo">
+                  Carta Super Trunfo
+                  <input
+                    className="trunfo"
+                    data-testid="trunfo-input"
+                    type="checkbox"
+                    id="trunfo"
+                    name="cardTrunfo"
+                    checked={ cardTrunfo }
+                    onChange={ onInputChange }
+                  />
+                </label>
+              )
+              : <h3>Você já tem um Super Trunfo em seu baralho!</h3>
+          }
+        </div>
         <button
+          className="button-save"
           type="submit"
           data-testid="save-button"
           disabled={ isSaveButtonDisabled }
