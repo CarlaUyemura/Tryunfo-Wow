@@ -3,7 +3,11 @@
         "browser": true,
         "es2020": true
     },
-    "extends": "trybe-frontend",
+    "extends": ["trybe-frontend", "next"],
+    "rules": {
+        "react/no-unescaped-entities": "off",
+        "@next/next/no-page-custom-font": "off"
+      },
     "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
