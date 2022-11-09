@@ -2,7 +2,7 @@ import React from 'react';
 import Form from '../components/Form';
 import Card from '../components/Card';
 import Filter from '../components/Filter';
-import '../App.css';
+import './App.css';
 import sylvanas from '../img/sylvans.jpg';
 import varian from '../img/varian.jpg';
 import arthas from '../img/arthas.jpg';
