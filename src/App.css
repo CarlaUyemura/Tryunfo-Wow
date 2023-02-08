@@ -1,0 +1,364 @@
+/* stylelint-disable selector-no-qualifying-type */
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap') ;
+
+@font-face {
+  font-family: LifeCraft;
+  src: url('./fonts/LifeCraft_Font.ttf');
+}
+
+@font-face {
+  font-family: SemplicitePro;
+  src: url('./fonts/SemplicitaPro-Bold.otf');
+}
+
+@font-face {
+  font-family: SemplicitePro-SemiBold;
+  src: url('./fonts/SemplicitaPro-Semibold.otf');
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('./img/fundo-wow.jpg');
+  background-repeat: repeat-y;
+  background-size: 100%;
+  font-family: SemplicitePro , Verdana , Geneva , Tahoma , sans-serif;
+}
+
+h1 {
+  color: rgb(243, 215, 3);
+  font-family: LifeCraft , Verdana , Geneva , Tahoma , sans-serif;
+  font-size: 100px;
+  letter-spacing: 5px;
+  text-shadow: 1px -1px 0 #3f2e06 , 2px -2px 0 #372703 , 3px -3px 0 #453205;
+}
+
+.card {
+  background-image: url('./img/card-trunfo-final.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: SemplicitePro , Verdana , Geneva , Tahoma , sans-serif;
+  height: 600px;
+  width: 550px;
+}
+
+.container-forms {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  gap: 30px;
+  height: 750px;
+  margin-top: 50px;
+  padding: 10px;
+  width: 55%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 160px;
+  width: 100%;
+}
+
+input, select {
+  border: 0;
+  border-radius: 10px;
+  font-size: 30px;
+  padding: 5px;
+  width: 80%;
+}
+
+.numbers {
+  margin-left: 10px;
+  text-align: center;
+  width: 80%;
+}
+
+.container-numbers {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 82%;
+}
+
+.raridade {
+  margin-left: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.container-select {
+  align-items: center;
+  display: flex;
+}
+
+.container-rare {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+}
+
+label {
+  padding: 10px 0;
+}
+
+textarea {
+  border: 0;
+  border-radius: 10px;
+  font-size: 25px;
+  height: 50px;
+  padding: 10px;
+  width: 79%;
+}
+
+input.trunfo {
+  height: 20px;
+  margin: 10px;
+  width: 20px;
+}
+
+button {
+  font-size: 30px;
+  padding: 5px;
+  width: 80%;
+}
+
+.container-card {
+  align-items: center;
+  display: flex;
+  height: 700px;
+  justify-content: center;
+  padding: 20px;
+  width: 400px;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.container-name {
+  height: 30px;
+  margin-left: 40px;
+  margin-top: 32px;
+  width: 320px;
+}
+
+.name-card {
+  color: white;
+  font-family: SemplicitaPro-Semibold , Verdana , Geneva , Tahoma , sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.img-card {
+  height: 237px;
+  max-width: 326px;
+  width: auto;
+}
+
+img {
+  border: 3px ridge rgb(111, 111, 111);
+  box-shadow: 3px;
+  height: 236px;
+  margin-left: 36px;
+  margin-top: 5px;
+  width: 325px;
+}
+
+.container-rare-trunfo {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  margin-left: 35px;
+  margin-top: 9px;
+  width: 350px;
+}
+
+.super-trunfo {
+  color: rgb(227, 202, 2);
+  font-family: LifeCraft , Verdana , Geneva , Tahoma , sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-top: 5px;
+  text-align: center;
+  text-shadow: 1px 1px 5px black;
+  width: 200px;
+}
+
+.normal {
+  color: white;
+  letter-spacing: 2px;
+
+}
+
+.raro {
+  color: rgb(25, 87, 255);
+  letter-spacing: 2px;
+}
+
+.muito-raro {
+  color: rgb(227, 202, 2);
+  letter-spacing: 2px;
+}
+
+.raridade-card {
+  font-family: LifeCraft , Verdana , Geneva , Tahoma , sans-serif;
+  font-size: 33px;
+  margin-top: 3px;
+  text-align: center;
+  text-shadow: 1px 1px 5px black;
+  width: 150px;
+}
+
+.container-descricao {
+  color: white;
+  height: 110px;
+  margin-left: 36px;
+  margin-top: 5px;
+  padding: 10px;
+  width: 300px;
+}
+
+
+.container-atributos {
+  align-items: flex-start;
+  display: flex;
+  font-family: LifeCraft , Verdana , Geneva , Tahoma , sans-serif;
+  height: 70px;
+  justify-content: space-around;
+  margin-left: -50px;
+  margin-top: 19px;
+}
+
+.forca {
+  color: white;
+  font-size: 40px;
+  height: 40px;
+  margin-left: 60px;
+  width: 40px;
+}
+
+.velocidade {
+  color: white;
+  font-size: 40px;
+  height: 40px;
+  margin-left: 40px;
+  width: 40px;
+}
+
+.magia {
+  color: white;
+  font-size: 40px;
+  height: 40px;
+  margin-left: 40px;
+  margin-right: 10px;
+  width: 40px;
+}
+
+h3 {
+  font-size: 23px;
+}
+
+.container-filter {
+  display: flex;
+  flex-direction: column;
+  font-size: 35px;
+  height: 100%;
+  margin-left: 50px;
+  min-width: 400px;
+  padding: 10px;
+  width: 400px;
+}
+
+.card-save {
+  display: flex;
+  justify-content: space-around;
+  width: 800px;
+}
+
+.container-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+section.container-card {
+  display: block;
+  float: left;
+  height: 500px;
+  justify-content: center;
+  margin-bottom: 150px;
+  margin-top: 19px;
+  padding: 20px;
+  width: 400px;
+}
+
+section.card {
+  display: block;
+  float: left;
+  height: 570px;
+  width: 400px;
+}
+
+.button-remove {
+  background-color: rgb(173, 8, 8);
+  border: 8px outset rgb(155, 28, 28);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-family: LifeCraft , Verdana , Geneva , Tahoma , sans-serif;
+  font-size: 35px;
+  margin-left: 125px;
+  width: 150px;
+}
+
+
+.button-remove:hover {
+  background-color: rgb(83, 7, 7);
+  border: 8px outset rgb(110, 24, 24);
+}
+
+.button-remove:active {
+  background-color: rgb(173, 8, 8);
+  border: 8px inset rgb(155, 28, 28);
+}
+
+.button-save {
+  background-color: rgb(0, 25, 252);
+  border: 8px outset rgba(9, 20, 139, 0.877);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-family: LifeCraft , Verdana , Geneva , Tahoma , sans-serif;
+  font-size: 35px;
+}
+
+.button-save:hover {
+  background-color: rgb(15, 24, 108);
+  border: 8px outset rgba(30, 35, 96, 0.825);
+}
+
+.button-save:active {
+  background-color: rgba(0, 20, 195, 0.814);
+  border: 8px inset rgba(38, 46, 126, 0.825);
+}
+
+.button-save:disabled {
+  background-color: rgba(167, 175, 255, 0.814);
+  border: 8px solid rgba(166, 168, 199, 0.825);
+}
